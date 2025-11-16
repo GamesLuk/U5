@@ -1,25 +1,38 @@
 package h1;
 
+import java.util.Arrays;
 import java.util.random.RandomGenerator;
 
 public class H1_main {
 
     public static void main(String[] args) {
 
-        int zone = RandomGenerator.getDefault().nextInt(1, 7);
-        double price = 0.0;
+        int[] myArray = {
+                RandomGenerator.getDefault().nextInt(1,10),
+                RandomGenerator.getDefault().nextInt(1,10),
+                RandomGenerator.getDefault().nextInt(1,10),
+                RandomGenerator.getDefault().nextInt(1,10),
+                RandomGenerator.getDefault().nextInt(1,10),
+                RandomGenerator.getDefault().nextInt(1,10),
+                RandomGenerator.getDefault().nextInt(1,10),
+                RandomGenerator.getDefault().nextInt(1,10),
+                RandomGenerator.getDefault().nextInt(1,10),
+                RandomGenerator.getDefault().nextInt(1,10)
+        };
 
-        System.out.println("Zone " + zone);
+        System.out.println("Array before sorting:");
+        System.out.println(Arrays.toString(myArray));
 
-        switch (zone) {
-            case 1 -> price = 2.00;
-            case 2 -> price = 2.35;
-            case 3, 4 -> price = 2.85;
-            case 5 -> price = 3.55;
-            default -> price = 4.00;
+        int[] sortedArray = new int[myArray.length];
+
+        for(int i = 0; i < myArray.length; i++){
+            sortedArray[i] = myArray[myArray.length - i - 1];
         }
 
-        System.out.println("Preis: " + price + " Euro");
+        myArray = sortedArray;
+
+        System.out.println("Array after sorting in descending order:");
+        System.out.println(Arrays.toString(myArray));
 
     }
 
