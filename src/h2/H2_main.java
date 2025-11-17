@@ -9,7 +9,7 @@ public class H2_main {
 
         int n = RandomGenerator.getDefault().nextInt(1,100_000_000);
         int digits;
-        int[] a = new int[9];
+        int[] a = new int[9];	// Prüfen
 
         System.out.println("n = " + n);
 
@@ -19,6 +19,7 @@ public class H2_main {
 
         System.out.println("digits = " + digits);
 
+		// For obsolet 
         for (int i = 0; i < str_n.length(); i++) {
             b = str_n.split("");
         }
