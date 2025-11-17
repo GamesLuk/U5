@@ -9,20 +9,17 @@ public class H2_main {
 
         int n = RandomGenerator.getDefault().nextInt(1,100_000_000);
         int digits;
-        int[] a = new int[9];	// Prüfen
+        int[] a = new int[9];
 
         System.out.println("n = " + n);
 
-        String[] b = new String[9];
+        String[] b;
         String str_n = n + "";
         digits = str_n.length();
 
         System.out.println("digits = " + digits);
 
-		// For obsolet 
-        for (int i = 0; i < str_n.length(); i++) {
-            b = str_n.split("");
-        }
+        b = str_n.split("");
 
         System.out.println("b = " + Arrays.toString(b));
 
